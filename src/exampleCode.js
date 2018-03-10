@@ -23,13 +23,11 @@ let audioFiles = [
 defaultPlayer = setUp + `
 //in component render()
 <AudioPlayer
-    audioFiles={audioFiles}
-/>`,
+    audioFiles={audioFiles}/>`,
 defaultWithStyle = setUp + `
 //in component render()
 <AudioPlayer
-   audioFiles={audioFiles}
-/>
+   audioFiles={audioFiles}/>
 
 
 //in css file
