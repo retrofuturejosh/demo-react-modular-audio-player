@@ -1,18 +1,20 @@
 html {
-  background-color: #404040; }
+  background-color: #c3c3c3;
+  background: linear-gradient(330deg, #939393, #3c3c3c); }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
-  margin: 1rem; }
+  font-family: 'Raleway'; }
 
 header {
   background-color: #b5bcff;
-  margin: -1rem -1rem 0;
-  padding: 1rem;
+  margin: 0 1rem;
+  padding: 0 0 0.5rem;
   text-align: center;
-  border-bottom: 1px solid; }
+  border: 1px solid;
+  border-top: none;
+  background: linear-gradient(217deg, white, #b5bcff); }
 
 p {
   margin: 0; }
@@ -35,13 +37,13 @@ h3 {
   border-bottom: solid 1px black; }
 
 h4 {
-  background-color: #b5bcff;
-  padding: 1rem 1rem;
+  background-color: #464545;
+  color: white;
+  padding: 0.5rem 1rem;
   margin: 1rem 0 0 0;
   cursor: default;
   text-align: left;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black; }
+  cursor: pointer; }
 
 .toggle-code {
   width: 100%; }
@@ -67,6 +69,9 @@ pre {
 .demo-code {
   width: 100%;
   overflow-x: scroll; }
+
+.audio-player-example {
+  margin: 1rem 0; }
 
 .audio-player-one {
   background-color: #b7b7b7;
