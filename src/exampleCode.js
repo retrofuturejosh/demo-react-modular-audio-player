@@ -40,9 +40,7 @@ defaultWithStyle = setUp + `
   filter: invert(100%);
 }`
 
-const examples =  {
+export {
   defaultPlayer,
   defaultWithStyle
 }
-
-export default examples;
