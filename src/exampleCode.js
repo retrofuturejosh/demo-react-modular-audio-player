@@ -82,109 +82,117 @@ let iconStyle = { width: "fit-content" },
 <AudioPlayer 
   audioFiles={audioFiles}
   rearrange={rearrangedPlayer}
-  playerWidth={"15rem"} 
-  iconSize="2rem"
-  fontSize="1.5rem"
+  playerWidth={"10rem"} 
+  iconSize="1.5rem"
+  fontSize="1rem"
   sliderClass="invert-blue-grey"/>
 
 
-//in scss file (this style is best achieved with sass)
+//in css file
 .audio-player-two {
   filter: invert(100%);
-  background-color: rgb(176, 176, 176);
+  background-color: #9d9c9c;
   padding: 0.2rem;
-  transform: scale(0.7);
-  img {
-    background-color: orange;
-    border-radius: 1rem;
-    z-index: 2;
-  }
-}
+  border-radius: 5px; }
+.audio-player-two img {
+  background-color: #bd7a00;
+  border-radius: 1rem;
+  z-index: 2; }
 
 input[type=range].invert-blue-grey {
   -webkit-appearance: none;
   width: 100%;
-  margin: 3.95px 0 3.95px -2px;
-}
+  margin: 5px 0; }
+
 input[type=range].invert-blue-grey:focus {
-  outline: none;
-}
+  outline: none; }
+
 input[type=range].invert-blue-grey::-webkit-slider-runnable-track {
   width: 100%;
-  height: 12.1px;
+  height: 1px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  background: #ffa500;
-  border: 1px solid #000000;
-}
+  background: #000000;
+  border-radius: 0px;
+  border: 0px solid #000000; }
+
 input[type=range].invert-blue-grey::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0.9px solid #000000;
-  height: 20px;
-  width: 20px;
+  border: 1px solid #000000;
+  height: 11px;
+  width: 11px;
   border-radius: 50px;
-  background: #b0b0b0;
+  background: #bd7a00;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -4.95px;
-}
+  margin-top: -5px; }
+
+input[type=range].invert-blue-grey::-webkit-slider-thumb:hover {
+  background: black; }
+
 input[type=range].invert-blue-grey:focus::-webkit-slider-runnable-track {
-  background: #ffa500;
-}
+  background: #000000; }
+
 input[type=range].invert-blue-grey::-moz-range-track {
   width: 100%;
-  height: 12.1px;
+  height: 1px;
   cursor: pointer;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  background: #ffa500;
+  background: #000000;
   border-radius: 0px;
-  border: 1px solid #000000;
-}
+  border: 0px solid #000000; }
+
 input[type=range].invert-blue-grey::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0.9px solid #000000;
-  height: 20px;
-  width: 20px;
+  border: 1px solid #000000;
+  height: 11px;
+  width: 11px;
   border-radius: 50px;
-  background: #b0b0b0;
-  cursor: pointer;
-}
+  background: #bd7a00;
+  cursor: pointer; }
+
+input[type=range].invert-blue-grey::-moz-range-thumb:hover {
+  background: black; }
+
 input[type=range].invert-blue-grey::-ms-track {
   width: 100%;
-  height: 12.1px;
+  height: 1px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
-  color: transparent;
-}
+  color: transparent; }
+
 input[type=range].invert-blue-grey::-ms-fill-lower {
-  background: #ffa500;
-  border: 1px solid #000000;
+  background: #000000;
+  border: 0px solid #000000;
   border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-}
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
 input[type=range].invert-blue-grey::-ms-fill-upper {
-  background: #ffa500;
-  border: 1px solid #000000;
+  background: #000000;
+  border: 0px solid #000000;
   border-radius: 0px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-}
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+
 input[type=range].invert-blue-grey::-ms-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  border: 0.9px solid #000000;
-  height: 20px;
-  width: 20px;
+  border: 1px solid #000000;
+  height: 11px;
+  width: 11px;
   border-radius: 50px;
-  background: #b0b0b0;
+  background: #bd7a00;
   cursor: pointer;
-  height: 12.1px;
-}
+  height: 1px; }
+
+input[type=range].invert-blue-grey::-ms-thumb:hover {
+  background: black; }
+
 input[type=range].invert-blue-grey:focus::-ms-fill-lower {
-  background: #ffa500;
-}
+  background: #000000; }
+
 input[type=range].invert-blue-grey:focus::-ms-fill-upper {
-  background: #ffa500;
-}`
+  background: #000000; }
+`
 
 export {
   defaultPlayer,

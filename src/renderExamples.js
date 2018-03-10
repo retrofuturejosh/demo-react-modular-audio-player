@@ -9,8 +9,8 @@ export default function renderExample(exampleName, className, component, codeSni
       <div className={className}>
        {component}
       </div>
+      {this.renderCodeHeader(idx)}
       <div className="demo-code" onClick={e => this.showCode(e, idx)}>
-        {this.renderCodeHeader(idx)}
         {this.state.showCode.includes(idx)
         ? (<pre> {codeSnippet} </pre>) 
         : null}

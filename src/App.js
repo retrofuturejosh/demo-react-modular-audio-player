@@ -33,10 +33,11 @@ class App extends Component {
 
   renderCodeHeader(idx) {
     return (
-      <h4 onClick={e => this.showCode(e, 1)}>
-        {" "}
-        {this.state.showCode.includes(idx) ? "Hide Code" : "Show Code"}
-      </h4>
+      <div className="toggle-code">
+        <h4 onClick={e => this.showCode(e, idx)}>
+          {this.state.showCode.includes(idx) ? "Hide Code" : "Show Code"}
+        </h4>
+      </div>
     );
   }
 
@@ -45,8 +46,9 @@ class App extends Component {
       <div className="App">
         <header className="demo-header">
           <h1 className="demo-header-title">
-            Examples of react-modular-audio-player
+            react-modular-audio-player
           </h1>
+          <p> by Josh Sohn (<a href="http://www.joshdsohn.com">www.joshdsohn.com</a>) </p>
         </header>
 
         {/* DEMO 1 */}
@@ -69,7 +71,7 @@ class App extends Component {
 
         {/* DEMO 3 */}
         {this.state.renderExamples(
-          "Using Rearrange Prop with SCSS Styling",
+          "Using Rearrange Prop with Styling",
           "audio-player-two",
           <AudioPlayer 
             audioFiles={audioFiles}
