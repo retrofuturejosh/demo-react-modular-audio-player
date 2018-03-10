@@ -1,5 +1,59 @@
+html {
+  background-color: rgb(174, 174, 174);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  margin: 1rem;
+}
+
+header {
+  background-color: rgba(0, 0, 255, 0.302);
+  margin: -1rem -1rem 0;
+  padding: 1px 1rem;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+h1 {
+  padding: 0.5rem;
+  margin: 0;
+}
+
+h3 {
+  background-color: rgba(0, 0, 255, 0.302);
+  margin-top: 0;
+  padding: 1rem;
+}
+
+h4 {
+  background-color: rgba(0, 0, 255, 0.302);
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.demo-audio-player {
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.557);
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+pre {
+  background-color: white;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0;
+}
+
+.demo-title {
+  width: 100%;
+}
+
+.demo-code {
+  width: 100%
 }
