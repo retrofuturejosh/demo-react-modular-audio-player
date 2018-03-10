@@ -74,9 +74,9 @@ class App extends Component {
           <AudioPlayer 
             audioFiles={audioFiles}
             rearrange={rearrangedPlayer}
-            playerWidth={"15rem"} 
-            iconSize="2rem"
-            fontSize="1.5rem"
+            playerWidth={"10rem"} 
+            iconSize="1.5rem"
+            fontSize="1rem"
             sliderClass="invert-blue-grey"/>,
           rearrangeExample,
           3

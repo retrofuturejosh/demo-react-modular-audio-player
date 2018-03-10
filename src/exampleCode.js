@@ -93,6 +93,7 @@ let iconStyle = { width: "fit-content" },
   filter: invert(100%);
   background-color: rgb(176, 176, 176);
   padding: 0.2rem;
+  transform: scale(0.7);
   img {
     background-color: orange;
     border-radius: 1rem;
