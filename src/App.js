@@ -3,8 +3,12 @@ import AudioPlayer from "react-modular-audio-player";
 
 import "./index.css";
 
-import {defaultPlayer, defaultWithStyle} from "./exampleCode";
-import {audioFiles} from "./setUp";
+import {
+  defaultPlayer, 
+  defaultWithStyle,
+  rearrangeExample
+} from "./exampleCode";
+import {audioFiles, rearrangedPlayer} from "./setUp";
 import renderExamples from "./renderExamples";
 
 class App extends Component {
@@ -62,6 +66,22 @@ class App extends Component {
           defaultWithStyle,
           2
         )}
+
+        {/* DEMO 3 */}
+        {this.state.renderExamples(
+          "Using Rearrange Prop with SCSS Styling",
+          "audio-player-two",
+          <AudioPlayer 
+            audioFiles={audioFiles}
+            rearrange={rearrangedPlayer}
+            playerWidth={"15rem"} 
+            iconSize="2rem"
+            fontSize="1.5rem"
+            sliderClass="invert-blue-grey"/>,
+          rearrangeExample,
+          3
+        )}
+
       </div>
     );
   }

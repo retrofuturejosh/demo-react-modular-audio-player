@@ -14,23 +14,23 @@ let audioFiles = [
     title: "Rolling In The Deep",
     artist: "Adele"
   }
-],
+],iconStyle = { width: "fit-content" },
 rearrangedPlayer = [
   {
     className: "tier-top",
-    style: { margin: "0.3rem" },
+    style: { padding: "5px 0" },
     innerComponents: [
       {
         type: "play",
-        style: { width: "fit-content" }
+        style: iconStyle
       },
       {
         type: "rewind",
-        style: { width: "fit-content" }
+        style: iconStyle
       },
       {
         type: "forward",
-        style: { width: "fit-content" }
+        style: iconStyle
       },
       {
         type: "volume"
@@ -39,11 +39,11 @@ rearrangedPlayer = [
   },
   {
     className: "tier-bottom",
-    style: { margin: "0rem 0.3rem 0.3rem 0.3rem" },
+    style: { padding: "5px 0" },
     innerComponents: [
       {
         type: "time",
-        style: { width: "fit-content" }
+        style: iconStyle
       },
       {
         type: "seek"
