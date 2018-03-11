@@ -1,4 +1,4 @@
-let setUp =`
+let setUp = `
 //in component
 import AudioPlayer from "react-modular-audio-player";
 
@@ -20,11 +20,15 @@ let audioFiles = [
   }
 ];
 `,
-defaultPlayer = setUp + `
+  defaultPlayer =
+    setUp +
+    `
 //in component render()
 <AudioPlayer
     audioFiles={audioFiles}/>`,
-defaultWithStyle = setUp + `
+  defaultWithStyle =
+    setUp +
+    `
 //in component render()
 <AudioPlayer
    audioFiles={audioFiles}/>
@@ -37,7 +41,10 @@ defaultWithStyle = setUp + `
   border-radius: 10px;
   filter: invert(100%);
 }`,
-rearrangeExample = setUp + `
+  rearrangeExample =
+    setUp +
+    `
+//for rearrange prop
 let iconStyle = { width: "fit-content" },
   rearrangedPlayer = [
     {
@@ -63,7 +70,6 @@ let iconStyle = { width: "fit-content" },
     },
     {
       className: "tier-bottom",
-      style: { padding: "5px 0" },
       innerComponents: [
         {
           type: "time",
@@ -92,6 +98,7 @@ let iconStyle = { width: "fit-content" },
   background-color: #9d9c9c;
   padding: 0.2rem;
   border-radius: 5px; }
+
 .audio-player-two img {
   background-color: #bd7a00;
   border-radius: 1rem;
@@ -190,10 +197,75 @@ input[type=range].invert-blue-grey:focus::-ms-fill-lower {
 
 input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   background: #000000; }
+`,
+  picturePlayExample = `
+//in component (using The Beatles - Hey Jude as example)
+import AudioPlayer from "react-modular-audio-player";
+
+let picRearrange = [
+  {
+    className: "beatles",
+    style: { cursor: "pointer" },
+    innerComponents: [
+      {
+        type: "play"
+      }
+    ]
+  }
+];
+
+//in component render()
+<AudioPlayer
+  audioFiles={[
+    {
+      src: "/heyJude.mp3",
+      title: "Hey Jude",
+      artist: "The Beatles"
+    }
+  ]}
+  rearrange={picRearrange}
+  playerWidth="10rem"
+  iconSize="10rem"
+  playIcon="/beatlesPic.png"
+  playHoverIcon="/beatlesPic.png"
+  pauseIcon="/beatlesPic.png"
+  pauseHoverIcon="beatlesPic.png"
+/>
+`,
+  customIconExample = setUp + `
+//in component render()
+<AudioPlayer
+  audioFiles={audioFiles}
+  //provide link to icons in public/statically served folder
+  playIcon="/playIcon.png"
+  playHoverIcon="/playHoverIcon.png"
+  pauseIcon="/pauseIcon.png"
+  pauseHoverIcon="/pauseIcon.png"
+  rewindIcon="/rewindIcon.png"
+  rewindHoverIcon="/rewindHoverIcon.png"
+  forwardIcon="/forwardIcon.png"
+  forwardHoverIcon="/forwardHoverIcon.png"
+  volumeIcon="/volumeIcon.png"
+  volumeEngagedIcon="/volumeEngagedIcon.png"
+  muteIcon="/muteIcon.png"
+  muteEngagedIcon="/muteEngagedIcon.png"
+  loopIcon="/loopIcon.png"
+  loopEngagedIcon="/loopEngagedIcon.png"
+/>
+
+//in css file (an example of how to target style of certain icons)
+#play-icon {
+  height: 0.77rem !important;
+}
+#loop-icon {
+  height: 0.9rem !important;
+}
 `
 
 export {
   defaultPlayer,
   defaultWithStyle,
-  rearrangeExample
-}
+  rearrangeExample,
+  picturePlayExample,
+  customIconExample
+};

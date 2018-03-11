@@ -40,7 +40,6 @@ let audioFiles = [
     },
     {
       className: "tier-bottom",
-      style: { padding: "5px 0" },
       innerComponents: [
         {
           type: "time",
@@ -51,6 +50,58 @@ let audioFiles = [
         }
       ]
     }
+  ],
+  picRearrange = [
+    {
+      className: "beatles",
+      style: { cursor: "pointer" },
+      innerComponents: [
+        {
+          type: "play"
+        }
+      ]
+    }
+  ],
+  rearrangedPlayerTwo = [
+    {
+      className: "top",
+      style: { marginBottom: "0.2rem" },
+      innerComponents: [
+        {
+          type: "name",
+          style: { width: "58%" }
+        },
+        {
+          type: "time",
+          style: { justifyContent: "flex-end" }
+        }
+      ]
+    },
+    {
+      className: "bottom",
+      innerComponents: [
+        {
+          type: "play",
+          style: { width: "12.5%", justifyContent: "flex-end" }
+        },
+        {
+          type: "rewind",
+          style: { width: "12.5%", justifyContent: "flex-end" }
+        },
+        {
+          type: "forward",
+          style: { width: "12.5%" }
+        },
+        {
+          type: "loop",
+          style: { width: "12.5%" }
+        },
+        {
+          type: "volume",
+          style: { width: "48%" }
+        }
+      ]
+    }
   ];
 
-export { audioFiles, rearrangedPlayer };
+export { audioFiles, rearrangedPlayer, picRearrange, rearrangedPlayerTwo };
