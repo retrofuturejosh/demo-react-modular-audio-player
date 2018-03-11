@@ -1,7 +1,7 @@
 {
-  "name": "my-app",
+  "name": "demo-react-modular-audio-player",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "node-sass-chokidar": "^1.1.0",
     "npm-run-all": "^4.1.2",
