@@ -57,7 +57,8 @@ let audioFiles = [
       style: { cursor: "pointer" },
       innerComponents: [
         {
-          type: "play"
+          type: "play",
+          style: { width: "100%", justifyContent: "center" }
         }
       ]
     }
@@ -102,6 +103,28 @@ let audioFiles = [
         }
       ]
     }
+  ],
+  picOverlay = [
+    {
+      className: "adele",
+      innerComponents: [
+        {
+          type: "play",
+          style: {
+            width: "100%",
+            justifyContent: "center",
+            filter: "invert(100%)",
+            opacity: "0.4"
+          }
+        }
+      ]
+    }
   ];
 
-export { audioFiles, rearrangedPlayer, picRearrange, rearrangedPlayerTwo };
+export {
+  audioFiles,
+  rearrangedPlayer,
+  picRearrange,
+  rearrangedPlayerTwo,
+  picOverlay
+};

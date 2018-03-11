@@ -129,6 +129,18 @@ pre {
   }
 }
 
+.audio-player-five {
+  background: url('/rolling.png');
+  height: 10rem;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  #play {
+    cursor: pointer;
+  }
+}
+
 input[type=range].invert-blue-grey {
   -webkit-appearance: none;
   width: 100%;

@@ -14,7 +14,8 @@ import {
   audioFiles,
   rearrangedPlayer,
   picRearrange,
-  rearrangedPlayerTwo
+  rearrangedPlayerTwo,
+  picOverlay
 } from "./setUp";
 import renderExamples from "./renderExamples";
 
@@ -185,6 +186,30 @@ class App extends Component {
           ],
           picturePlayExample,
           5
+        )}
+
+
+        {/* DEMO 6 */}
+        {this.state.renderExamples(
+          "Background Picture with Play Overlay",
+          "audio-player-five",
+          [
+            <AudioPlayer
+              audioFiles={[
+                {
+                  src: "/rollingInTheDeep.mp3",
+                  title: "Rolling In The Deep",
+                  artist: "Adele"
+                }
+              ]}
+              rearrange={picOverlay}
+              playerWidth="10rem"
+              width="10rem"
+              iconSize="9rem"
+            />
+          ],
+          customIconExample,
+          6
         )}
       </div>
     );

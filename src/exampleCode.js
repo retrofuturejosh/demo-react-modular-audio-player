@@ -233,10 +233,54 @@ let picRearrange = [
 />
 `,
   customIconExample = setUp + `
+//for rearrange prop
+let rearrangedPlayer = [
+  {
+    className: "top",
+    style: { marginBottom: "0.2rem" },
+    innerComponents: [
+      {
+        type: "name",
+        style: { width: "58%" }
+      },
+      {
+        type: "time",
+        style: { justifyContent: "flex-end" }
+      }
+    ]
+  },
+  {
+    className: "bottom",
+    innerComponents: [
+      {
+        type: "play",
+        style: { width: "12.5%", justifyContent: "flex-end" }
+      },
+      {
+        type: "rewind",
+        style: { width: "12.5%", justifyContent: "flex-end" }
+      },
+      {
+        type: "forward",
+        style: { width: "12.5%" }
+      },
+      {
+        type: "loop",
+        style: { width: "12.5%" }
+      },
+      {
+        type: "volume",
+        style: { width: "48%" }
+      }
+    ]
+  }
+];
+
 //in component render()
 <AudioPlayer
   audioFiles={audioFiles}
-  //provide link to icons in public/statically served folder
+  rearrange={rearrangedPlayer}
+  iconSize="1.5rem"
   playIcon="/playIcon.png"
   playHoverIcon="/playHoverIcon.png"
   pauseIcon="/pauseIcon.png"
@@ -246,14 +290,25 @@ let picRearrange = [
   forwardIcon="/forwardIcon.png"
   forwardHoverIcon="/forwardHoverIcon.png"
   volumeIcon="/volumeIcon.png"
-  volumeEngagedIcon="/volumeEngagedIcon.png"
+  volumeEngagedIcon="/volumeIcon.png"
   muteIcon="/muteIcon.png"
-  muteEngagedIcon="/muteEngagedIcon.png"
+  muteEngagedIcon="/muteIcon.png"
   loopIcon="/loopIcon.png"
   loopEngagedIcon="/loopEngagedIcon.png"
+  fontFamily="serif"
+  fontSize="1.5rem"
+  playerWidth="15rem"
 />
 
-//in css file (an example of how to target style of certain icons)
+//in css file
+.audio-player {
+  background-color: #cfcccc;
+  padding: 0.2rem;
+  border: solid 1px;
+  box-shadow: 2px 2px 15px black;
+}
+
+//an example of how to target style of certain icons
 #play-icon {
   height: 0.77rem !important;
 }
