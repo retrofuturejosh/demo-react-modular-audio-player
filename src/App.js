@@ -171,10 +171,10 @@ class App extends Component {
               rearrange={picRearrange}
               playerWidth="10rem"
               iconSize="10rem"
-              playIcon={this.getFileRef("/upTownFunk.png")}
-              playHoverIcon={this.getFileRef("/upTownFunk.png")}
-              pauseIcon={this.getFileRef("/upTownFunk.png")}
-              pauseHoverIcon={this.getFileRef("/upTownFunk.png")}
+              playIcon={this.getFileRef("/uptownFunk.png")}
+              playHoverIcon={this.getFileRef("/uptownFunk.png")}
+              pauseIcon={this.getFileRef("/uptownFunk.png")}
+              pauseHoverIcon={this.getFileRef("/uptownFunk.png")}
             />,
             <AudioPlayer
               audioFiles={[
