@@ -1,6 +1,6 @@
 let audioFiles = [
     {
-      src: "/heyJude.mp3",
+      src: "https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/heyJude.mp3?raw=true",
       title: "Hey Jude",
       artist: "The Beatles"
     },
