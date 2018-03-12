@@ -32,6 +32,7 @@ class App extends Component {
     };
     this.showCode = this.showCode.bind(this);
     this.renderCodeHeader = this.renderCodeHeader.bind(this);
+    this.getFileRef = this.getFileRef.bind(this);
   }
 
   showCode(e, idx) {
@@ -41,6 +42,10 @@ class App extends Component {
       ? currentCodes.push(idx)
       : currentCodes.splice(currentIdx, 1);
     this.setState({ showCode: currentCodes });
+  }
+
+  getFileRef(str) {
+    return `https://raw.githubusercontent.com/retrofuturejosh/demo-react-modular-audio-player/master/public${str}`
   }
 
   renderCodeHeader(idx) {
@@ -111,20 +116,20 @@ class App extends Component {
               audioFiles={audioFiles}
               rearrange={rearrangedPlayerTwo}
               iconSize="1.5rem"
-              playIcon="/playIcon.png"
-              playHoverIcon="/playHoverIcon.png"
-              pauseIcon="/pauseIcon.png"
-              pauseHoverIcon="/pauseIcon.png"
-              rewindIcon="/rewindIcon.png"
-              rewindHoverIcon="/rewindHoverIcon.png"
-              forwardIcon="/forwardIcon.png"
-              forwardHoverIcon="/forwardHoverIcon.png"
-              volumeIcon="/volumeIcon.png"
-              volumeEngagedIcon="/volumeIcon.png"
-              muteIcon="/muteIcon.png"
-              muteEngagedIcon="/muteIcon.png"
-              loopIcon="/loopIcon.png"
-              loopEngagedIcon="/loopEngagedIcon.png"
+              playIcon={this.getFileRef("/playIcon.png")}
+              playHoverIcon={this.getFileRef("/playHoverIcon.png")}
+              pauseIcon={this.getFileRef("/pauseIcon.png")}
+              pauseHoverIcon={this.getFileRef("/pauseIcon.png")}
+              rewindIcon={this.getFileRef("/rewindIcon.png")}
+              rewindHoverIcon={this.getFileRef("/rewindHoverIcon.png")}
+              forwardIcon={this.getFileRef("/forwardIcon.png")}
+              forwardHoverIcon={this.getFileRef("/forwardHoverIcon.png")}
+              volumeIcon={this.getFileRef("/volumeIcon.png")}
+              volumeEngagedIcon={this.getFileRef("/volumeIcon.png")}
+              muteIcon={this.getFileRef("/muteIcon.png")}
+              muteEngagedIcon={this.getFileRef("/muteIcon.png")}
+              loopIcon={this.getFileRef("/loopIcon.png")}
+              loopEngagedIcon={this.getFileRef("/loopEngagedIcon.png")}
               fontFamily="serif"
               fontSize="1.5rem"
               playerWidth="15rem"
@@ -150,10 +155,10 @@ class App extends Component {
               rearrange={picRearrange}
               playerWidth="10rem"
               iconSize="10rem"
-              playIcon="/beatlesPic.png"
-              playHoverIcon="/beatlesPic.png"
-              pauseIcon="/beatlesPic.png"
-              pauseHoverIcon="beatlesPic.png"
+              playIcon={this.getFileRef("/beatlesPic.png")}
+              playHoverIcon={this.getFileRef("/beatlesPic.png")}
+              pauseIcon={this.getFileRef("/beatlesPic.png")}
+              pauseHoverIcon={this.getFileRef("beatlesPic.png")}
             />,
             <AudioPlayer
               audioFiles={[
@@ -166,10 +171,10 @@ class App extends Component {
               rearrange={picRearrange}
               playerWidth="10rem"
               iconSize="10rem"
-              playIcon="/upTownFunk.png"
-              playHoverIcon="/upTownFunk.png"
-              pauseIcon="/upTownFunk.png"
-              pauseHoverIcon="/upTownFunk.png"
+              playIcon={this.getFileRef("/upTownFunk.png")}
+              playHoverIcon={this.getFileRef("/upTownFunk.png")}
+              pauseIcon={this.getFileRef("/upTownFunk.png")}
+              pauseHoverIcon={this.getFileRef("/upTownFunk.png")}
             />,
             <AudioPlayer
               audioFiles={[
@@ -182,10 +187,10 @@ class App extends Component {
               rearrange={picRearrange}
               playerWidth="10rem"
               iconSize="10rem"
-              playIcon="/rolling.png"
-              playHoverIcon="/rolling.png"
-              pauseIcon="/rolling.png"
-              pauseHoverIcon="/rolling.png"
+              playIcon={this.getFileRef("/rolling.png")}
+              playHoverIcon={this.getFileRef("/rolling.png")}
+              pauseIcon={this.getFileRef("/rolling.png")}
+              pauseHoverIcon={this.getFileRef("/rolling.png")}
             />
           ],
           picturePlayExample,
