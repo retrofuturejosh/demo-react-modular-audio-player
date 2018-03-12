@@ -315,6 +315,55 @@ let rearrangedPlayer = [
 #loop-icon {
   height: 0.9rem !important;
 }
+`,
+  overlayExample = `
+//in component
+import AudioPlayer from "react-modular-audio-player";
+
+//for rearrange prop
+let picOverlay = [
+  {
+    className: "adele",
+    innerComponents: [
+      {
+        type: "play",
+        style: {
+          width: "100%",
+          justifyContent: "center",
+          filter: "invert(100%)",
+          opacity: "0.4"
+        }
+      }
+    ]
+  }
+];
+
+<AudioPlayer
+  audioFiles={[
+    {
+      src: "/rollingInTheDeep.mp3",
+      title: "Rolling In The Deep",
+      artist: "Adele"
+    }
+  ]}
+  rearrange={picOverlay}
+  playerWidth="10rem"
+  width="10rem"
+  iconSize="9rem"
+/>
+
+//in CSS file
+.audio-player {
+  background: url('/rolling.png');
+  height: 10rem;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#play {
+  cursor: pointer;
+}
 `
 
 export {
@@ -322,5 +371,6 @@ export {
   defaultWithStyle,
   rearrangeExample,
   picturePlayExample,
-  customIconExample
+  customIconExample,
+  overlayExample
 };

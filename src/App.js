@@ -8,7 +8,8 @@ import {
   defaultWithStyle,
   rearrangeExample,
   picturePlayExample,
-  customIconExample
+  customIconExample,
+  overlayExample
 } from "./exampleCode";
 import {
   audioFiles,
@@ -191,15 +192,13 @@ class App extends Component {
 
         {/* DEMO 6 */}
         {this.state.renderExamples(
-          "Background Picture with Play Overlay",
+          "Background Picture with Play/Pause Overlay",
           "audio-player-five",
           [
             <AudioPlayer
               audioFiles={[
                 {
-                  src: "/rollingInTheDeep.mp3",
-                  title: "Rolling In The Deep",
-                  artist: "Adele"
+                  src: "/rollingInTheDeep.mp3"
                 }
               ]}
               rearrange={picOverlay}
@@ -208,7 +207,7 @@ class App extends Component {
               iconSize="9rem"
             />
           ],
-          customIconExample,
+          overlayExample,
           6
         )}
       </div>
