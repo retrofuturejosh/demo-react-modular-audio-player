@@ -1,16 +1,19 @@
-let audioFiles = [
+let rollingMP3 = "https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/rollingInTheDeep.mp3?raw=true",
+  uptownFunkMP3 = "https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/uptownFunk.mp3?raw=true",
+  heyJudeMP3 = "https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/heyJude.mp3?raw=true",
+ audioFiles = [
     {
-      src: "https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/heyJude.mp3?raw=true",
+      src: heyJudeMP3,
       title: "Hey Jude",
       artist: "The Beatles"
     },
     {
-      src: "/uptownFunk.mp3",
+      src: uptownFunkMP3,
       title: "Uptown Funk ft. Bruno Mars",
       artist: "Mark Ronson"
     },
     {
-      src: "/rollingInTheDeep.mp3",
+      src: rollingMP3,
       title: "Rolling In The Deep",
       artist: "Adele"
     }
@@ -122,6 +125,9 @@ let audioFiles = [
   ];
 
 export {
+  heyJudeMP3,
+  uptownFunkMP3,
+  rollingMP3,
   audioFiles,
   rearrangedPlayer,
   picRearrange,

@@ -12,6 +12,9 @@ import {
   overlayExample
 } from "./exampleCode";
 import {
+  rollingMP3,
+  heyJudeMP3,
+  uptownFunkMP3,
   audioFiles,
   rearrangedPlayer,
   picRearrange,
@@ -139,7 +142,7 @@ class App extends Component {
             <AudioPlayer
               audioFiles={[
                 {
-                  src: "/heyJude.mp3",
+                  src: heyJudeMP3,
                   title: "Hey Jude",
                   artist: "The Beatles"
                 }
@@ -155,7 +158,7 @@ class App extends Component {
             <AudioPlayer
               audioFiles={[
                 {
-                  src: "/uptownFunk.mp3",
+                  src: uptownFunkMP3,
                   title: "Uptown Funk ft. Bruno Mars",
                   artist: "Mark Ronson"
                 }
@@ -171,7 +174,7 @@ class App extends Component {
             <AudioPlayer
               audioFiles={[
                 {
-                  src: "/rollingInTheDeep.mp3",
+                  src: rollingMP3,
                   title: "Rolling In The Deep",
                   artist: "Adele"
                 }
@@ -198,7 +201,7 @@ class App extends Component {
             <AudioPlayer
               audioFiles={[
                 {
-                  src: "/rollingInTheDeep.mp3"
+                  src: rollingMP3
                 }
               ]}
               rearrange={picOverlay}
