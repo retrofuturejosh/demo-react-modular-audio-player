@@ -19,6 +19,7 @@ let audioFiles = [
   }
 ];
 `,
+
   defaultPlayer =
 `<AudioPlayer
   audioFiles={audioFiles}/>`,
@@ -30,9 +31,9 @@ let audioFiles = [
   filter: invert(100%);
 }
 `,
-  rearrangeExample =
-    setUp +
-    `
+
+  rearrangeSetup =
+`
 //for rearrange prop
 let iconStyle = { width: "fit-content" },
   rearrangedPlayer = [
@@ -69,19 +70,19 @@ let iconStyle = { width: "fit-content" },
         }
       ]
     }
-  ];
-
-//in component render()
+  ];`,
+  rearrangeJSX =
+`//in component render()
 <AudioPlayer 
   audioFiles={audioFiles}
   rearrange={rearrangedPlayer}
-  playerWidth={"10rem"} 
+  playerWidth="10rem"
   iconSize="1.5rem"
   fontSize="1rem"
-  sliderClass="invert-blue-grey"/>
+  sliderClass="invert-blue-grey"/>`,
 
-
-//in css file
+  rearrangeStyle = 
+`//in css file
 .audio-player-two {
   filter: invert(100%);
   background-color: #9d9c9c;
@@ -97,10 +98,8 @@ input[type=range].invert-blue-grey {
   -webkit-appearance: none;
   width: 100%;
   margin: 5px 0; }
-
 input[type=range].invert-blue-grey:focus {
   outline: none; }
-
 input[type=range].invert-blue-grey::-webkit-slider-runnable-track {
   width: 100%;
   height: 1px;
@@ -109,7 +108,6 @@ input[type=range].invert-blue-grey::-webkit-slider-runnable-track {
   background: #000000;
   border-radius: 0px;
   border: 0px solid #000000; }
-
 input[type=range].invert-blue-grey::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 1px solid #000000;
@@ -120,13 +118,10 @@ input[type=range].invert-blue-grey::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -5px; }
-
 input[type=range].invert-blue-grey::-webkit-slider-thumb:hover {
   background: black; }
-
 input[type=range].invert-blue-grey:focus::-webkit-slider-runnable-track {
   background: #000000; }
-
 input[type=range].invert-blue-grey::-moz-range-track {
   width: 100%;
   height: 1px;
@@ -135,7 +130,6 @@ input[type=range].invert-blue-grey::-moz-range-track {
   background: #000000;
   border-radius: 0px;
   border: 0px solid #000000; }
-
 input[type=range].invert-blue-grey::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 1px solid #000000;
@@ -144,10 +138,8 @@ input[type=range].invert-blue-grey::-moz-range-thumb {
   border-radius: 50px;
   background: #bd7a00;
   cursor: pointer; }
-
 input[type=range].invert-blue-grey::-moz-range-thumb:hover {
   background: black; }
-
 input[type=range].invert-blue-grey::-ms-track {
   width: 100%;
   height: 1px;
@@ -155,19 +147,16 @@ input[type=range].invert-blue-grey::-ms-track {
   background: transparent;
   border-color: transparent;
   color: transparent; }
-
 input[type=range].invert-blue-grey::-ms-fill-lower {
   background: #000000;
   border: 0px solid #000000;
   border-radius: 0px;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
-
 input[type=range].invert-blue-grey::-ms-fill-upper {
   background: #000000;
   border: 0px solid #000000;
   border-radius: 0px;
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
-
 input[type=range].invert-blue-grey::-ms-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 1px solid #000000;
@@ -177,21 +166,17 @@ input[type=range].invert-blue-grey::-ms-thumb {
   background: #bd7a00;
   cursor: pointer;
   height: 1px; }
-
 input[type=range].invert-blue-grey::-ms-thumb:hover {
   background: black; }
-
 input[type=range].invert-blue-grey:focus::-ms-fill-lower {
   background: #000000; }
-
 input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   background: #000000; }
 `,
-  picturePlayExample = `
-//in component (using The Beatles - Hey Jude as example)
-import AudioPlayer from "react-modular-audio-player";
+  picturePlaySetUp = 
+`import AudioPlayer from "react-modular-audio-player";
 
-let picRearrange = [
+let rearrangedPlayer = [
   {
     className: "beatles",
     style: { cursor: "pointer" },
@@ -201,10 +186,9 @@ let picRearrange = [
       }
     ]
   }
-];
-
-//in component render()
-<AudioPlayer
+];`,
+  picturePlayJSX =
+`<AudioPlayer
   audioFiles={[
     {
       src: "/heyJude.mp3",
@@ -212,7 +196,7 @@ let picRearrange = [
       artist: "The Beatles"
     }
   ]}
-  rearrange={picRearrange}
+  rearrange={rearrangedPlayer}
   playerWidth="10rem"
   iconSize="10rem"
   playIcon="/beatlesPic.png"
@@ -221,7 +205,8 @@ let picRearrange = [
   pauseHoverIcon="beatlesPic.png"
 />
 `,
-  customIconExample = setUp + `
+  customIconSetUp = setUp + 
+`
 //for rearrange prop
 let rearrangedPlayer = [
   {
@@ -263,9 +248,9 @@ let rearrangedPlayer = [
       }
     ]
   }
-];
-
-//in component render()
+];`,
+  customIconJSX =
+`//in component render()
 <AudioPlayer
   audioFiles={audioFiles}
   rearrange={rearrangedPlayer}
@@ -287,10 +272,9 @@ let rearrangedPlayer = [
   fontFamily="serif"
   fontSize="1.5rem"
   playerWidth="15rem"
-/>
-
-//in css file
-.audio-player {
+/>`,
+  customIconCSS =
+`.audio-player {
   background-color: #cfcccc;
   padding: 0.2rem;
   border: solid 1px;
@@ -305,12 +289,11 @@ let rearrangedPlayer = [
   height: 0.9rem !important;
 }
 `,
-  overlayExample = `
-//in component
-import AudioPlayer from "react-modular-audio-player";
+  overlaySetUp = 
+`import AudioPlayer from "react-modular-audio-player";
 
 //for rearrange prop
-let picOverlay = [
+let rearrangedPlayer = [
   {
     className: "adele",
     innerComponents: [
@@ -325,9 +308,9 @@ let picOverlay = [
       }
     ]
   }
-];
-
-<AudioPlayer
+];`, 
+  overlayJSX =
+`<AudioPlayer
   audioFiles={[
     {
       src: "/rollingInTheDeep.mp3",
@@ -335,14 +318,12 @@ let picOverlay = [
       artist: "Adele"
     }
   ]}
-  rearrange={picOverlay}
+  rearrange={rearrangedPlayer}
   playerWidth="10rem"
-  width="10rem"
   iconSize="9rem"
-/>
-
-//in CSS file
-.audio-player {
+/>`,
+  overlayCSS =
+`.audio-player {
   background: url('/rolling.png');
   height: 10rem;
   background-size: contain;
@@ -352,15 +333,21 @@ let picOverlay = [
 }
 #play {
   cursor: pointer;
-}
-`
+}`
 
 export {
   setUp,
   defaultPlayer,
   defaultWithStyle,
-  rearrangeExample,
-  picturePlayExample,
-  customIconExample,
-  overlayExample
+  rearrangeSetup,
+  rearrangeJSX,
+  rearrangeStyle,
+  picturePlaySetUp,
+  picturePlayJSX,
+  customIconSetUp,
+  customIconJSX,
+  customIconCSS,
+  overlaySetUp,
+  overlayJSX,
+  overlayCSS
 };

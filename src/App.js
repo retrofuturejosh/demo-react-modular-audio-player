@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import AudioPlayer from "react-modular-audio-player";
-import Prism from '@maji/react-prism'
-import './components/prism-jsx'
-import './components/prism-css'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import Prism from "@maji/react-prism";
+import "./components/prism-jsx";
+import "./components/prism-css";
 
-import './themes/prism.css'
-
+import "./themes/prism.css";
 
 import "./index.css";
 
@@ -13,10 +13,17 @@ import {
   setUp,
   defaultPlayer,
   defaultWithStyle,
-  rearrangeExample,
-  picturePlayExample,
-  customIconExample,
-  overlayExample
+  rearrangeSetup,
+  rearrangeJSX,
+  rearrangeStyle,
+  picturePlaySetUp,
+  picturePlayJSX,
+  customIconSetUp,
+  customIconCSS,
+  customIconJSX,
+  overlaySetUp,
+  overlayJSX,
+  overlayCSS
 } from "./exampleCode";
 import {
   rollingMP3,
@@ -52,7 +59,7 @@ class App extends Component {
   }
 
   getFileRef(str) {
-    return `https://raw.githubusercontent.com/retrofuturejosh/demo-react-modular-audio-player/master/public${str}`
+    return `https://raw.githubusercontent.com/retrofuturejosh/demo-react-modular-audio-player/master/public${str}`;
   }
 
   renderCodeHeader(idx) {
@@ -69,13 +76,32 @@ class App extends Component {
     return (
       <div className="App">
         <header className="demo-header">
+          <div className="social-media">
+            <a href="http://www.joshdsohn.com">
+            joshdsohn.com
+            </a>
+          <a class="github-button" href="https://github.com/retrofuturejosh/react-modular-audio-player" aria-label="Star retrofuturejosh/react-modular-audio-player on GitHub">Star</a>
+          </div>
           <h1 className="demo-header-title">react-modular-audio-player</h1>
-          <p>
-            {" "}
-            by Josh Sohn (<a href="http://www.joshdsohn.com">
-              www.joshdsohn.com
-            </a>){" "}
-          </p>
+          <p id="header-info"> Create custom audio players in React </p>
+          <div className="header-buttons">
+            <div
+              className="button-link"
+              onClick={e => {
+                window.location.href = "https://github.com/retrofuturejosh/react-modular-audio-player";
+              }}
+            >
+              View on GitHub
+            </div>
+            <div
+              className="button-link"
+              onClick={e => {
+                window.location.href = "https://www.npmjs.com/package/react-modular-audio-player";
+              }}
+            >
+              View Docs
+            </div>
+          </div>
         </header>
 
         {/* DEMO 1 */}
@@ -83,16 +109,12 @@ class App extends Component {
           "Default Player",
           "audio-player-default",
           [<AudioPlayer audioFiles={audioFiles} />],
-          (<div>
+          <div>
             <span className="directions"> In Component.js </span>
-            <Prism language={'javascript'}>
-              {setUp}
-            </Prism>
+            <Prism language={"javascript"}>{setUp}</Prism>
             <span className="directions"> In Component's render() </span>
-            <Prism language={'jsx'}>
-              {defaultPlayer}
-            </Prism>
-          </div>),
+            <Prism language={"jsx"}>{defaultPlayer}</Prism>
+          </div>,
           1
         )}
 
@@ -101,20 +123,14 @@ class App extends Component {
           "Default Player with Styling",
           "audio-player-one",
           [<AudioPlayer audioFiles={audioFiles} />],
-          (<div>
+          <div>
             <span className="directions"> In Component.js </span>
-            <Prism language={'javascript'}>
-              {setUp}
-            </Prism>
+            <Prism language={"javascript"}>{setUp}</Prism>
             <span className="directions"> In Component's render() </span>
-            <Prism language={'jsx'}>
-              {defaultPlayer}
-            </Prism>
+            <Prism language={"jsx"}>{defaultPlayer}</Prism>
             <span className="directions"> CSS </span>
-            <Prism language={'css'}>
-              {defaultWithStyle}
-            </Prism>
-          </div>),
+            <Prism language={"css"}>{defaultWithStyle}</Prism>
+          </div>,
           2
         )}
 
@@ -126,13 +142,20 @@ class App extends Component {
             <AudioPlayer
               audioFiles={audioFiles}
               rearrange={rearrangedPlayer}
-              playerWidth={"10rem"}
+              playerWidth="10rem"
               iconSize="1.5rem"
               fontSize="1rem"
               sliderClass="invert-blue-grey"
             />
           ],
-          rearrangeExample,
+          <div>
+            <span className="directions"> In Component.js </span>
+            <Prism language={"javascript"}>{setUp + rearrangeSetup}</Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={"jsx"}>{rearrangeJSX}</Prism>
+            <span className="directions"> CSS </span>
+            <Prism language={"css"}>{rearrangeStyle}</Prism>
+          </div>,
           3
         )}
 
@@ -164,7 +187,14 @@ class App extends Component {
               playerWidth="15rem"
             />
           ],
-          customIconExample,
+          <div>
+            <span className="directions"> In Component.js </span>
+            <Prism language={"javascript"}>{customIconSetUp}</Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={"jsx"}>{customIconJSX}</Prism>
+            <span className="directions"> CSS </span>
+            <Prism language={"css"}>{customIconCSS}</Prism>
+          </div>,
           4
         )}
 
@@ -222,10 +252,17 @@ class App extends Component {
               pauseHoverIcon={this.getFileRef("/rolling.png")}
             />
           ],
-          picturePlayExample,
+          <div>
+            <span className="directions">
+              {" "}
+              In Component (using The Beatles - Hey Jude as example){" "}
+            </span>
+            <Prism language={"javascript"}>{picturePlaySetUp}</Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={"jsx"}>{picturePlayJSX}</Prism>
+          </div>,
           5
         )}
-
 
         {/* DEMO 6 */}
         {this.state.renderExamples(
@@ -240,13 +277,23 @@ class App extends Component {
               ]}
               rearrange={picOverlay}
               playerWidth="10rem"
-              width="10rem"
               iconSize="9rem"
             />
           ],
-          overlayExample,
+          <div>
+            <span className="directions"> In Component </span>
+            <Prism language={"javascript"}>{overlaySetUp}</Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={"jsx"}>{overlayJSX}</Prism>
+            <span className="directions"> CSS </span>
+            <Prism language={"css"}>{overlayCSS}</Prism>
+          </div>,
           6
         )}
+
+        {/* <ScrollableAnchor id={'Docs'}>
+          <h1 id="documentation"> Documentation </h1>
+        </ScrollableAnchor> */}
       </div>
     );
   }

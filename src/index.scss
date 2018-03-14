@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Nunito Sans';
+  font-family: 'Nunito Sans' !important;
 }
 
 header {
@@ -15,11 +15,10 @@ header {
   margin: 0;
   padding: 0 0 0.5rem;
   text-align: center;
-  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(217deg, rgb(255, 255, 255), #b5bcff),
+  background: linear-gradient(217deg, #2fa6e2, #b5bcff),
 }
 
 .directions {
@@ -28,18 +27,27 @@ header {
   font-family: 'Nunito Sans'
 }
 
+#header-info {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
 p {
   margin: 0;
+  color: white;
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 h1 {
-  padding: 0.5rem;
-  margin: 4rem 0;
+  color: white;
+  padding: 0.5rem 0 0;
+  margin: 3rem 0 0;
   cursor: default;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
 }
 
 h3 {
@@ -64,6 +72,36 @@ h4 {
 
 h4:hover {
   border-bottom: solid 1px #b8beff;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.header-buttons {
+  letter-spacing: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.button-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px white;
+  margin: 1rem;
+  width: 9rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.button-link:hover {
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 .toggle-code {
@@ -249,4 +287,14 @@ input[type=range].invert-blue-grey:focus::-ms-fill-lower {
 }
 input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   background: #000000;
+}
+
+#documentation {
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  background-color: #b5bcff;
+  background: -webkit-linear-gradient(233deg, #2fa6e2, #b5bcff);
+  background: -o-linear-gradient(233deg, #2fa6e2, #b5bcff);
+  background: linear-gradient(217deg, #2fa6e2, #b5bcff);
 }
