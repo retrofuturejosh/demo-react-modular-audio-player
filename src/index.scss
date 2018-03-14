@@ -1,22 +1,31 @@
 html {
-  background-color: #c3c3c3;
-  background: linear-gradient(330deg, #939393, #3c3c3c);
+  background-color: white;
+  // background: linear-gradient(330deg, #939393, #3c3c3c);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
+  font-family: 'Nunito Sans';
 }
 
 header {
+  letter-spacing: 1px;
   background-color: #b5bcff;
-  margin: 0 1rem;
+  margin: 0;
   padding: 0 0 0.5rem;
   text-align: center;
-  border: 1px solid;
-  border-top: none;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(217deg, rgb(255, 255, 255), #b5bcff),
+}
+
+.directions {
+  margin: 1rem 0;
+  display: block;
+  font-family: 'Nunito Sans'
 }
 
 p {
@@ -29,28 +38,32 @@ a {
 
 h1 {
   padding: 0.5rem;
-  margin: 0;
+  margin: 4rem 0;
   cursor: default;
 }
 
 h3 {
-  background-color: rgba(181, 188, 255, 0.49);
-  margin-top: 0;
-  padding: 1rem;
+  margin: 2rem 0;
+  padding-bottom: 0.5rem;
   cursor: default;
   width: 100%;
   text-align: left;
-  border-bottom: solid 1px black;
+  border-bottom: solid 2px #b7beff;
+  letter-spacing: 1px;
 }
 
 h4 {
-  background-color: rgb(70, 69, 69);
-  color: white;
-  padding: 0.5rem 1rem;
+  width: fit-content;
+  letter-spacing: 1px;
   margin: 1rem 0 0 0;
   cursor: default;
   text-align: left;
   cursor: pointer;
+  border-bottom: solid 1px white;
+}
+
+h4:hover {
+  border-bottom: solid 1px #b8beff;
 }
 
 .toggle-code {
@@ -60,15 +73,13 @@ h4 {
 .demo-audio-player {
   margin: 1rem;
   background-color: white;
-  border-width: 1px;
-  border-style: solid;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 pre {
-  padding: 0 1rem 1rem 1rem;
+  // padding: 0 1rem 1rem 1rem;
   margin: 0;
 }
 
@@ -79,8 +90,12 @@ pre {
 }
 
 .demo-code {
-  width: 100%;
+  width: 90%;
   overflow-x: scroll;
+}
+
+.code {
+  background-color: #1e1e1e;
 }
 
 .audio-player-example {

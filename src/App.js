@@ -1,9 +1,16 @@
 import React, { Component } from "react";
 import AudioPlayer from "react-modular-audio-player";
+import Prism from '@maji/react-prism'
+import './components/prism-jsx'
+import './components/prism-css'
+
+import './themes/prism.css'
+
 
 import "./index.css";
 
 import {
+  setUp,
   defaultPlayer,
   defaultWithStyle,
   rearrangeExample,
@@ -76,7 +83,16 @@ class App extends Component {
           "Default Player",
           "audio-player-default",
           [<AudioPlayer audioFiles={audioFiles} />],
-          defaultPlayer,
+          (<div>
+            <span className="directions"> In Component.js </span>
+            <Prism language={'javascript'}>
+              {setUp}
+            </Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={'jsx'}>
+              {defaultPlayer}
+            </Prism>
+          </div>),
           1
         )}
 
@@ -85,7 +101,20 @@ class App extends Component {
           "Default Player with Styling",
           "audio-player-one",
           [<AudioPlayer audioFiles={audioFiles} />],
-          defaultWithStyle,
+          (<div>
+            <span className="directions"> In Component.js </span>
+            <Prism language={'javascript'}>
+              {setUp}
+            </Prism>
+            <span className="directions"> In Component's render() </span>
+            <Prism language={'jsx'}>
+              {defaultPlayer}
+            </Prism>
+            <span className="directions"> CSS </span>
+            <Prism language={'css'}>
+              {defaultWithStyle}
+            </Prism>
+          </div>),
           2
         )}
 

@@ -22,7 +22,7 @@ export default function renderExample(
         </div>
       </div>
       {this.renderCodeHeader(idx)}
-      <div className="demo-code" onClick={e => this.showCode(e, idx)}>
+      <div className="demo-code">
         {this.state.showCode.includes(idx) ? <pre> {codeSnippet} </pre> : null}
       </div>
     </div>

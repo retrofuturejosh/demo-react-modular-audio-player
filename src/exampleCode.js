@@ -1,6 +1,5 @@
-let setUp = `
-//in component
-import AudioPlayer from "react-modular-audio-player";
+let setUp = 
+`import AudioPlayer from "react-modular-audio-player";
 
 let audioFiles = [
   {
@@ -21,26 +20,16 @@ let audioFiles = [
 ];
 `,
   defaultPlayer =
-    setUp +
-    `
-//in component render()
-<AudioPlayer
-    audioFiles={audioFiles}/>`,
+`<AudioPlayer
+  audioFiles={audioFiles}/>`,
   defaultWithStyle =
-    setUp +
-    `
-//in component render()
-<AudioPlayer
-   audioFiles={audioFiles}/>
-
-
-//in css file
-.audio-player {
+  `.audio-player {
   background-color: #b7b7b7;
   padding: 0.5rem;
   border-radius: 10px;
   filter: invert(100%);
-}`,
+}
+`,
   rearrangeExample =
     setUp +
     `
@@ -367,6 +356,7 @@ let picOverlay = [
 `
 
 export {
+  setUp,
   defaultPlayer,
   defaultWithStyle,
   rearrangeExample,
