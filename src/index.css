@@ -24,7 +24,7 @@ header {
 
 #header-info {
   font-size: 1.3rem;
-  margin-bottom: 3rem; }
+  margin: 1rem 0 1rem; }
 
 p {
   margin: 0;
@@ -35,8 +35,8 @@ a {
 
 h1 {
   color: white;
-  padding: 0.5rem 0 0;
-  margin: 3rem 0 0;
+  padding: 0;
+  margin: 0;
   cursor: default;
   font-size: 2.5rem;
   letter-spacing: 3px; }
@@ -71,7 +71,7 @@ h4:hover {
   letter-spacing: 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 1rem; }
 
 .button-link {
   cursor: pointer;
@@ -262,3 +262,11 @@ input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   background: -webkit-linear-gradient(233deg, #2fa6e2, #b5bcff);
   background: -o-linear-gradient(233deg, #2fa6e2, #b5bcff);
   background: linear-gradient(217deg, #2fa6e2, #b5bcff); }
+
+#sound {
+  width: 7rem;
+  height: 5rem; }
+
+.sound-icon {
+  display: flex;
+  justify-content: center; }

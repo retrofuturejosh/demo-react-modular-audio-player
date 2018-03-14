@@ -82,6 +82,9 @@ class App extends Component {
             </a>
           <a class="github-button" href="https://github.com/retrofuturejosh/react-modular-audio-player" aria-label="Star retrofuturejosh/react-modular-audio-player on GitHub">Star</a>
           </div>
+          <div className="sound-icon">
+          <img id="sound" src="https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/levels.png?raw=true" />
+          </div>
           <h1 className="demo-header-title">react-modular-audio-player</h1>
           <p id="header-info"> Create custom audio players in React </p>
           <div className="header-buttons">
