@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import TableOfContents from "./TableOfContents";
 import Setup from "./Setup";
+import Props from "./Props";
 
 export default class Docs extends Component {
   constructor() {
@@ -11,7 +12,7 @@ export default class Docs extends Component {
   }
 
   scrollTo(scrollToLocation) {
-    this[scrollToLocation].scrollIntoView(true);
+    this[scrollToLocation].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   addRef(ref, name) {
@@ -23,6 +24,7 @@ export default class Docs extends Component {
       <div className="docs">
         <TableOfContents scroll={this.scrollTo} />
         <Setup addRef={this.addRef}/>
+        <Props addRef={this.addRef}/>
 
         <div
           className="props"
