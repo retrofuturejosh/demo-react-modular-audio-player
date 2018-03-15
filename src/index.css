@@ -292,5 +292,5 @@ input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   width: fit-content;
   border-bottom: solid 1px white; }
 
-.setup, .props, .rearrange {
+.setup, .props, .rearrange, .styling {
   margin: 1rem; }

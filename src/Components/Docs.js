@@ -4,6 +4,7 @@ import TableOfContents from "./TableOfContents";
 import Setup from "./Setup";
 import Props from "./Props";
 import Rearrange from "./Rearrange";
+import Styling from "./Styling"
 
 export default class Docs extends Component {
   constructor() {
@@ -27,15 +28,7 @@ export default class Docs extends Component {
         <Setup addRef={this.addRef}/>
         <Props addRef={this.addRef}/>
         <Rearrange addRef={this.addRef}/>
-
-        <div
-          className="styling"
-          ref={styling => {
-            this.styling = styling;
-          }}
-        >
-          STYLING
-        </div>
+        <Styling addRef={this.addRef}/>
       </div>
     );
   }

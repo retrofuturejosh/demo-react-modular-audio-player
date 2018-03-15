@@ -8,7 +8,7 @@ import "../Prism/components/prism-javascript"
 const Rearrange = (props) => {
   let {addRef} = props;
   return (
-    <div className="props" ref={rearrange => addRef(rearrange, 'rearrange')}>
+    <div className="rearrange" ref={rearrange => addRef(rearrange, 'rearrange')}>
       <h2>Rearrange Prop</h2>
       <h3 ref={subcomponents => addRef(subcomponents, 'subcomponents')}>Subcomponents</h3>
       <h3 ref={tierObject => addRef(tierObject, 'tierObject')}>Tier Object</h3>
