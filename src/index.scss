@@ -374,3 +374,17 @@ th {
 .even-row {
   background-color: rgb(238, 238, 238);
 }
+
+#subcomponent-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+#rearrange-doc-example {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+}

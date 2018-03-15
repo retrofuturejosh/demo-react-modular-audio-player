@@ -321,3 +321,15 @@ th {
 
 .even-row {
   background-color: #eeeeee; }
+
+#subcomponent-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem; }
+
+#rearrange-doc-example {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem; }
