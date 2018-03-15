@@ -40,7 +40,7 @@ const TableOfContents = props => {
             </li>
             <li>
               <span className="li-sublist" onClick={e => scroll("tierExample")}>
-                Subcomponents
+                Tier Example
               </span>
             </li>
             <li>
@@ -64,7 +64,7 @@ const TableOfContents = props => {
                     className="li-sublist"
                     onClick={e => scroll("innerComponentStyle")}
                   >
-                    Default InnerComponent Style
+                    Default InnerComponent Styling
                   </span>
                 </li>
               </ul>
