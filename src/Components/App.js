@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import AudioPlayer from "react-modular-audio-player";
 import ScrollableAnchor from 'react-scrollable-anchor'
 import Prism from "@maji/react-prism";
-import "./components/prism-jsx";
-import "./components/prism-css";
+import '../Prism/components/prism-jsx'
+import '../Prism/components/prism-css'
+import '../Prism/themes/prism.css'
 
-import "./themes/prism.css";
-
-import "./index.css";
+import "../index.css";
 
 import {
   setUp,
@@ -24,7 +23,7 @@ import {
   overlaySetUp,
   overlayJSX,
   overlayCSS
-} from "./exampleCode";
+} from "./utils/exampleCode";
 import {
   rollingMP3,
   heyJudeMP3,
@@ -34,8 +33,8 @@ import {
   picRearrange,
   rearrangedPlayerTwo,
   picOverlay
-} from "./setUp";
-import renderExamples from "./renderExamples";
+} from "./utils/setUp";
+import renderExamples from "./utils/renderExamples";
 
 class App extends Component {
   constructor() {
@@ -74,39 +73,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="demo-header">
-          <div className="social-media">
-            <a href="http://www.joshdsohn.com">
-            joshdsohn.com
-            </a>
-          <a class="github-button" href="https://github.com/retrofuturejosh/react-modular-audio-player" aria-label="Star retrofuturejosh/react-modular-audio-player on GitHub">Star</a>
-          </div>
-          <div className="sound-icon">
-          <img id="sound" src="https://github.com/retrofuturejosh/demo-react-modular-audio-player/blob/master/public/levels.png?raw=true" />
-          </div>
-          <h1 className="demo-header-title">react-modular-audio-player</h1>
-          <p id="header-info"> Create custom audio players in React </p>
-          <div className="header-buttons">
-            <div
-              className="button-link"
-              onClick={e => {
-                window.location.href = "https://github.com/retrofuturejosh/react-modular-audio-player";
-              }}
-            >
-              View on GitHub
-            </div>
-            <div
-              className="button-link"
-              onClick={e => {
-                window.location.href = "https://www.npmjs.com/package/react-modular-audio-player";
-              }}
-            >
-              View Docs
-            </div>
-          </div>
-        </header>
-
+      <div className="Examples">
         {/* DEMO 1 */}
         {this.state.renderExamples(
           "Default Player",
