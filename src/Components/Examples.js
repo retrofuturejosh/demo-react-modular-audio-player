@@ -1,26 +1,21 @@
 import React, { Component } from "react";
 import AudioPlayer from "react-modular-audio-player";
-import ScrollableAnchor from 'react-scrollable-anchor'
 import Prism from "@maji/react-prism";
-import '../Prism/components/prism-jsx'
-import '../Prism/components/prism-css'
-import '../Prism/themes/prism.css'
+import "../Prism/components/prism-jsx";
+import "../Prism/components/prism-css";
+import "../Prism/components/prism-javascript"
+import "../Prism/themes/prism.css";
 
 import "../index.css";
 
 import {
-  setUp,
   defaultPlayer,
   defaultWithStyle,
-  rearrangeSetup,
   rearrangeJSX,
   rearrangeStyle,
-  picturePlaySetUp,
   picturePlayJSX,
-  customIconSetUp,
   customIconCSS,
   customIconJSX,
-  overlaySetUp,
   overlayJSX,
   overlayCSS
 } from "./utils/exampleCode";
@@ -36,7 +31,7 @@ import {
 } from "./utils/setUp";
 import renderExamples from "./utils/renderExamples";
 
-class App extends Component {
+class Examples extends Component {
   constructor() {
     super();
     this.state = {
@@ -73,16 +68,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="Examples">
+      <div className="examples">
         {/* DEMO 1 */}
         {this.state.renderExamples(
           "Default Player",
           "audio-player-default",
           [<AudioPlayer audioFiles={audioFiles} />],
           <div>
-            <span className="directions"> In Component.js </span>
-            <Prism language={"javascript"}>{setUp}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{defaultPlayer}</Prism>
           </div>,
           1
@@ -94,9 +86,6 @@ class App extends Component {
           "audio-player-one",
           [<AudioPlayer audioFiles={audioFiles} />],
           <div>
-            <span className="directions"> In Component.js </span>
-            <Prism language={"javascript"}>{setUp}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{defaultPlayer}</Prism>
             <span className="directions"> CSS </span>
             <Prism language={"css"}>{defaultWithStyle}</Prism>
@@ -119,9 +108,6 @@ class App extends Component {
             />
           ],
           <div>
-            <span className="directions"> In Component.js </span>
-            <Prism language={"javascript"}>{setUp + rearrangeSetup}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{rearrangeJSX}</Prism>
             <span className="directions"> CSS </span>
             <Prism language={"css"}>{rearrangeStyle}</Prism>
@@ -158,9 +144,6 @@ class App extends Component {
             />
           ],
           <div>
-            <span className="directions"> In Component.js </span>
-            <Prism language={"javascript"}>{customIconSetUp}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{customIconJSX}</Prism>
             <span className="directions"> CSS </span>
             <Prism language={"css"}>{customIconCSS}</Prism>
@@ -223,12 +206,6 @@ class App extends Component {
             />
           ],
           <div>
-            <span className="directions">
-              {" "}
-              In Component (using The Beatles - Hey Jude as example){" "}
-            </span>
-            <Prism language={"javascript"}>{picturePlaySetUp}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{picturePlayJSX}</Prism>
           </div>,
           5
@@ -251,22 +228,15 @@ class App extends Component {
             />
           ],
           <div>
-            <span className="directions"> In Component </span>
-            <Prism language={"javascript"}>{overlaySetUp}</Prism>
-            <span className="directions"> In Component's render() </span>
             <Prism language={"jsx"}>{overlayJSX}</Prism>
             <span className="directions"> CSS </span>
             <Prism language={"css"}>{overlayCSS}</Prism>
           </div>,
           6
         )}
-
-        {/* <ScrollableAnchor id={'Docs'}>
-          <h1 id="documentation"> Documentation </h1>
-        </ScrollableAnchor> */}
       </div>
     );
   }
 }
 
-export default App;
+export default Examples;

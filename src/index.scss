@@ -50,7 +50,8 @@ h1 {
   letter-spacing: 3px;
 }
 
-h3 {
+
+h3, h2 {
   margin: 2rem 0;
   padding-bottom: 0.5rem;
   cursor: default;
@@ -68,6 +69,7 @@ h4 {
   text-align: left;
   cursor: pointer;
   border-bottom: solid 1px white;
+  font-size: 1.25rem;
 }
 
 h4:hover {
@@ -307,4 +309,34 @@ input[type=range].invert-blue-grey:focus::-ms-fill-upper {
 .sound-icon {
   display: flex;
   justify-content: center;
+}
+
+.index {
+  margin: 3rem 1rem 1rem 1rem;
+}
+
+.li-main {
+  font-size: 1.3rem;
+  list-style-type: none;
+}
+
+.li-header {
+  cursor: pointer;
+  width: fit-content;
+  border-bottom: solid 1px white;
+}
+
+.li-header:hover, .li-sublist:hover {
+  border-bottom: solid 1px #b8beff;
+}
+
+.li-sublist {
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: fit-content;
+  border-bottom: solid 1px white;
+}
+
+.setup {
+  margin: 1rem;
 }

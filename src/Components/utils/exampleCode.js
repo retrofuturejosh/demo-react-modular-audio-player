@@ -1,5 +1,6 @@
 let setUp = 
-`import AudioPlayer from "react-modular-audio-player";
+`//inside Component
+import AudioPlayer from "react-modular-audio-player";
 
 let audioFiles = [
   {
@@ -18,10 +19,11 @@ let audioFiles = [
     artist: "Adele"
   }
 ];
-`,
 
-  defaultPlayer =
-`<AudioPlayer
+`;
+let defaultPlayer = setUp + 
+`//inside Component render()
+<AudioPlayer
   audioFiles={audioFiles}/>`,
   defaultWithStyle =
   `.audio-player {
@@ -30,9 +32,8 @@ let audioFiles = [
   border-radius: 10px;
   filter: invert(100%);
 }
-`,
-
-  rearrangeSetup =
+`;
+let rearrangeJSX = setUp + 
 `
 //for rearrange prop
 let iconStyle = { width: "fit-content" },
@@ -70,18 +71,17 @@ let iconStyle = { width: "fit-content" },
         }
       ]
     }
-  ];`,
-  rearrangeJSX =
-`//in component render()
+  ];
+  
+//inside Component render()
 <AudioPlayer 
   audioFiles={audioFiles}
   rearrange={rearrangedPlayer}
   playerWidth="10rem"
   iconSize="1.5rem"
   fontSize="1rem"
-  sliderClass="invert-blue-grey"/>`,
-
-  rearrangeStyle = 
+  sliderClass="invert-blue-grey"/>`;
+let rearrangeStyle = 
 `//in css file
 .audio-player-two {
   filter: invert(100%);
@@ -172,9 +172,10 @@ input[type=range].invert-blue-grey:focus::-ms-fill-lower {
   background: #000000; }
 input[type=range].invert-blue-grey:focus::-ms-fill-upper {
   background: #000000; }
-`,
-  picturePlaySetUp = 
-`import AudioPlayer from "react-modular-audio-player";
+`;
+let picturePlayJSX = 
+`//inside Component (using The Beatles - Hey Jude as example) 
+import AudioPlayer from "react-modular-audio-player";
 
 let rearrangedPlayer = [
   {
@@ -186,9 +187,10 @@ let rearrangedPlayer = [
       }
     ]
   }
-];`,
-  picturePlayJSX =
-`<AudioPlayer
+];
+
+//inside Component render()
+<AudioPlayer
   audioFiles={[
     {
       src: "/heyJude.mp3",
@@ -204,10 +206,9 @@ let rearrangedPlayer = [
   pauseIcon="/beatlesPic.png"
   pauseHoverIcon="beatlesPic.png"
 />
-`,
-  customIconSetUp = setUp + 
-`
-//for rearrange prop
+`;
+let customIconJSX = setUp + 
+`//for rearrange prop
 let rearrangedPlayer = [
   {
     className: "top",
@@ -248,9 +249,9 @@ let rearrangedPlayer = [
       }
     ]
   }
-];`,
-  customIconJSX =
-`//in component render()
+];
+
+//inside Component render()
 <AudioPlayer
   audioFiles={audioFiles}
   rearrange={rearrangedPlayer}
@@ -272,8 +273,9 @@ let rearrangedPlayer = [
   fontFamily="serif"
   fontSize="1.5rem"
   playerWidth="15rem"
-/>`,
-  customIconCSS =
+/>`;
+
+let customIconCSS =
 `.audio-player {
   background-color: #cfcccc;
   padding: 0.2rem;
@@ -288,9 +290,11 @@ let rearrangedPlayer = [
 #loop-icon {
   height: 0.9rem !important;
 }
-`,
-  overlaySetUp = 
-`import AudioPlayer from "react-modular-audio-player";
+`;
+
+let overlayJSX = 
+`//inside Component
+import AudioPlayer from "react-modular-audio-player";
 
 //for rearrange prop
 let rearrangedPlayer = [
@@ -308,9 +312,10 @@ let rearrangedPlayer = [
       }
     ]
   }
-];`, 
-  overlayJSX =
-`<AudioPlayer
+];
+
+//inside Component render()
+<AudioPlayer
   audioFiles={[
     {
       src: "/rollingInTheDeep.mp3",
@@ -321,8 +326,9 @@ let rearrangedPlayer = [
   rearrange={rearrangedPlayer}
   playerWidth="10rem"
   iconSize="9rem"
-/>`,
-  overlayCSS =
+/>`;
+
+let overlayCSS =
 `.audio-player {
   background: url('/rolling.png');
   height: 10rem;
@@ -339,15 +345,11 @@ export {
   setUp,
   defaultPlayer,
   defaultWithStyle,
-  rearrangeSetup,
   rearrangeJSX,
   rearrangeStyle,
-  picturePlaySetUp,
   picturePlayJSX,
-  customIconSetUp,
   customIconJSX,
   customIconCSS,
-  overlaySetUp,
   overlayJSX,
   overlayCSS
 };

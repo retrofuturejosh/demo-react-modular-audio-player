@@ -10,7 +10,7 @@ export default function renderExample(
   return (
     <div className="demo-audio-player">
       <div className="demo-title">
-        <h3> {exampleName} </h3>
+        <h2> {exampleName} </h2>
       </div>
       <div className="audio-player-example">
         <div className={className}>

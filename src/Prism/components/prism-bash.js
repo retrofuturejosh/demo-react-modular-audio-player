@@ -1,3 +1,5 @@
+import Prism from 'prismjs'
+
 (function(Prism) {
 	var insideString = {
 		variable: [

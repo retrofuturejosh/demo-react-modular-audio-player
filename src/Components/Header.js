@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  console.log(window.location.hash);
   return (
     <header className="demo-header">
       <div className="social-media">
@@ -25,32 +24,16 @@ const Header = () => {
       <h1 className="demo-header-title">react-modular-audio-player</h1>
       <p id="header-info"> Create custom audio players in React </p>
       <div className="header-buttons">
-        <div
-          className="button-link"
-          onClick={e => {
-            window.location.href =
-              "https://github.com/retrofuturejosh/react-modular-audio-player";
-          }}
-        >
-          View on GitHub
-        </div>
+        <a href="https://github.com/retrofuturejosh/react-modular-audio-player">
+          <div className="button-link">View on GitHub</div>
+        </a>
         {window.location.hash === "#/docs" ? (
-          <div
-            className="button-link"
-            onClick={e => {
-              window.location.href =
-                "https://www.npmjs.com/package/react-modular-audio-player";
-            }}
-          >
-            View Examples
-          </div>
+          <Link to="/examples">
+            <div className="button-link">View Examples</div>
+          </Link>
         ) : (
           <Link to="/docs">
-          <div
-            className="button-link"
-          >
-            View Docs
-          </div>
+            <div className="button-link">View Docs</div>
           </Link>
         )}
       </div>
