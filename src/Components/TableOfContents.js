@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const TableOfContents = props => {
   let { scroll } = props;
@@ -19,11 +19,11 @@ const TableOfContents = props => {
             </li>
           </ul>
         </li>
-        <li className="li-main" onClick={e => scroll("props")}>
+        <li className="li-main" onClick={e => scroll("propsExample")}>
           <span className="li-header"> Props </span>
         </li>
-        <li className="li-main" onClick={e => scroll("rearrange")}>
-          <span className="li-header"> Rearrange Prop </span>
+        <li className="li-main" >
+          <span className="li-header" onClick={e => scroll("rearrange")}> Rearrange Prop </span>
           <ul>
             <li>
               <span
@@ -79,8 +79,8 @@ const TableOfContents = props => {
             </li>
           </ul>
         </li>
-        <li className="li-main" onClick={e => scroll("styling")}>
-          <span className="li-header"> Styling </span>
+        <li className="li-main" >
+          <span className="li-header" onClick={e => scroll("styling")}> Styling </span>
           <ul>
             <li>
               <span className="li-sublist" onClick={e => scroll("mainStyle")}>

@@ -375,7 +375,7 @@ th {
   background-color: rgb(238, 238, 238);
 }
 
-#subcomponent-table {
+#subcomponent-table, #icons-table {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -387,4 +387,8 @@ th {
   flex-direction: row;
   justify-content: center;
   margin: 1rem;
+}
+
+#a-blue {
+  color: blue;
 }

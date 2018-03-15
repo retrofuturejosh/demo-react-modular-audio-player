@@ -3,7 +3,7 @@ import React from "react";
 const Props = props => {
   let { addRef } = props;
   return (
-    <div className="props" ref={props => addRef(props, "props")}>
+    <div className="props" ref={propsExample => addRef(propsExample, "propsExample")}>
       <h2>Props</h2>
       <table>
         <thead>
