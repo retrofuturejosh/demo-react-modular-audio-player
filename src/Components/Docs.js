@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import TableOfContents from "./TableOfContents";
 import Setup from "./Setup";
 import Props from "./Props";
+import Rearrange from "./Rearrange";
 
 export default class Docs extends Component {
   constructor() {
@@ -25,24 +26,7 @@ export default class Docs extends Component {
         <TableOfContents scroll={this.scrollTo} />
         <Setup addRef={this.addRef}/>
         <Props addRef={this.addRef}/>
-
-        <div
-          className="props"
-          ref={props => {
-            this.props = props;
-          }}
-        >
-          PROPS
-        </div>
-
-        <div
-          className="rearrange"
-          ref={rearrange => {
-            this.rearrange = rearrange;
-          }}
-        >
-          REARRANGE
-        </div>
+        <Rearrange addRef={this.addRef}/>
 
         <div
           className="styling"
