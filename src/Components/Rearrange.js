@@ -54,7 +54,7 @@ const Rearrange = props => {
       <div className="text">
         The rearrange prop allows you to render subcomponents in any order you
         wish. It also allows you to build your audioplayer in multiple columns
-        called tiers.
+        called tiers, containing an array of innerComponents which arrange the desired subcomponents.
       </div>
 
       <h3
@@ -64,8 +64,8 @@ const Rearrange = props => {
         Subcomponents
       </h3>
       <div className="text">
-        The rearrange prop allows you to arrange the following subcomponents.
-        All of these subcomponents are referenced by a string name.{" "}
+        The rearrange prop allows you to arrange the following subcomponents within a tier object's innerComponents array.
+        All of these subcomponents are referenced by a string name. Pass the subcomponent's string name as the value for 'type' within each individual innerComponent object.
       </div>
       <div id="subcomponent-table">
         <table>
@@ -241,9 +241,9 @@ const Rearrange = props => {
       </h3>
       <div className="text">
         Below is an example of a custom arranged AudioPlayer with two tiers. The
-        first tier contains the play, rewind, forward, and volume
-        innerComponents. The second tier contains the time and seek
-        innerComponents. It appears like this:
+        first tier's innerComponents contains the play, rewind, forward, and volume
+        subcomponents. The second tier's innerComponents contains the time and seek
+        subcomponents. It appears like this:
         <div id="rearrange-doc-example">
           <AudioPlayer
             rearrange={rearrangedPlayer}
