@@ -55,10 +55,13 @@ h3, h2 {
   margin: 2rem 0;
   padding-bottom: 0.5rem;
   cursor: default;
-  width: 100%;
   text-align: left;
   border-bottom: solid 2px #b7beff;
   letter-spacing: 1px;
+}
+
+h2 {
+  width: 100%;
 }
 
 h4 {
@@ -338,4 +341,12 @@ input[type=range].invert-blue-grey:focus::-ms-fill-upper {
 
 .setup, .props, .rearrange, .styling {
   margin: 1rem;
+}
+
+.indent {
+  padding-left: 2rem;
+}
+
+.double-indent {
+  padding-left: 4rem;
 }

@@ -31,7 +31,7 @@ const Setup = (props) => {
       <Prism language="jsx">
         {`<AudioPlayer audioFiles={audioFilesArray}>`}
       </Prism>
-      <h3 ref={simple => addRef(simple, 'simple')}> Simple Example </h3>
+      <h3 className="indent" ref={simple => addRef(simple, 'simple')}> Simple Example </h3>
       <Prism language="jsx">
       {`import AudioPlayer from 'react-modular-audio-player';
 
