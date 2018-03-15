@@ -170,7 +170,7 @@ class Examples extends Component {
               playIcon={this.getFileRef("/beatlesPic.png")}
               playHoverIcon={this.getFileRef("/beatlesPic.png")}
               pauseIcon={this.getFileRef("/beatlesPic.png")}
-              pauseHoverIcon={this.getFileRef("beatlesPic.png")}
+              pauseHoverIcon={this.getFileRef("/beatlesPic.png")}
             />,
             <AudioPlayer
               audioFiles={[
