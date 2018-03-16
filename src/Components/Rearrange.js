@@ -89,7 +89,7 @@ const Rearrange = props => {
               <td>renders the skip/forward icon</td>
             </tr>
             <tr className="even-row">
-              <td>"loop</td>
+              <td>"loop"</td>
               <td>renders the loop icon</td>
             </tr>
             <tr>
