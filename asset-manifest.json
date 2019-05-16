@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.fbe2fb41.css",
-  "main.css.map": "static/css/main.fbe2fb41.css.map",
-  "main.js": "static/js/main.7c1360ca.js",
-  "main.js.map": "static/js/main.7c1360ca.js.map"
+  "files": {
+    "main.css": "/demo-react-modular-audio-player/static/css/main.7c760ce2.chunk.css",
+    "main.js": "/demo-react-modular-audio-player/static/js/main.a2131e8c.chunk.js",
+    "main.js.map": "/demo-react-modular-audio-player/static/js/main.a2131e8c.chunk.js.map",
+    "runtime~main.js": "/demo-react-modular-audio-player/static/js/runtime~main.9a9b32b6.js",
+    "runtime~main.js.map": "/demo-react-modular-audio-player/static/js/runtime~main.9a9b32b6.js.map",
+    "static/js/2.64b85476.chunk.js": "/demo-react-modular-audio-player/static/js/2.64b85476.chunk.js",
+    "static/js/2.64b85476.chunk.js.map": "/demo-react-modular-audio-player/static/js/2.64b85476.chunk.js.map",
+    "index.html": "/demo-react-modular-audio-player/index.html",
+    "precache-manifest.d02d34e77f8bc74a09e218e89fa5823b.js": "/demo-react-modular-audio-player/precache-manifest.d02d34e77f8bc74a09e218e89fa5823b.js",
+    "service-worker.js": "/demo-react-modular-audio-player/service-worker.js",
+    "static/css/main.7c760ce2.chunk.css.map": "/demo-react-modular-audio-player/static/css/main.7c760ce2.chunk.css.map"
+  }
 }
